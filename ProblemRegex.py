@@ -44,19 +44,13 @@ def phone3(num):
 def ssn(num):
     num = str(num)
     
-    regex = '\d{3}\-\d{2}\-\d{4}'
+    regex = '\d{3}\-?\d{2}\-?\d{4}'
     match = re.findall(regex,num)
     
-    regex2 = '\d{9}'
-    match2 = re.findall(regex2,num)
-    
     if match:
-        print('SSN broken up with -')
+        print('SSN')
         print(match)
-        
-    elif match2:
-        print('SSN 9 in a row')
-        print(match2)
+
 
 
 
